@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --grayish-red: hsl(0, 6%, 24%);
+    --light-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --thick-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    --weight-300: 300;
+    --weight-400: 400;
+    --weight-500: 500;
+}
+
+body {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+.logo {
+    margin: 50px;
+}
+
+.desktophero, .desktoplogo {
+    display: none;
+}
+
+
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--light-gradient);
+}
+
+h1 {
+    font-weight: var(--weight-500);
+    font-size: 3rem;
+    line-height: 100%;
+    margin: 20px auto;
+    letter-spacing: 1rem;
+}
+
+h1 span {
+    color: var(--primary-red);
+}
+
+p {
+    color: var(--primary-red);
+    line-height: 150%;
+    font-size: 1.5rem;
+}
+
+main .image {
+    width: 100%;
+}
+
+main .image img {
+    width: 100%;
+}
+
+main .text {
+    padding: 25px 25px 50px;
+}
+
+form {
+    border: 2px solid var(--primary-red);
+    border-radius: 30px;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 0px 0px;
+}
+
+ p.error-message {
+    color: var(--soft-red);
+    margin: 50px;
+    display: none;
+}
+
+
+input[type='email'] {
+    border: none;
+    outline: none;
+    padding: 15px 15px;
+    margin: auto 20px;
+    font-weight: var(--weight-400);
+    letter-spacing: 0.3rem;
+    display: inline-block;
+    min-width: 70%;
+}
+
+input[type='email']:invalid p.error-message {
+    display: block;
+}
+
+button {
+    background: var(--thick-gradient);
+    /* background-image: url('images/icon-arrow.svg'); */
+    outline: none;
+    padding: 15px 35px;
+    border-radius: 30px;
+    border: none;
+}
+
+input[type='submit']:hover , button:hover {
+    transform: scale(1.25);
+}
+
+footer {
+    margin: 15px auto;
+}
+
+.attribution { font-size: 15px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 850px) {
+    .mobilehero, .logo {
+        display: none;
+    }
+
+    .desktophero, .desktoplogo {
+        display: block;
+    }
+    
+    main {
+        display: flex;
+        flex-direction: row-reverse;
+
+    }
+
+    .desktoplogo {
+        margin-bottom: 100px;
+    }
+
+    main .image {
+        height: 100%;
+        width: 35%;
+    }
+
+    main .image img {
+        height: 100%;
+    }
+
+    main .text {
+        text-align: left;
+        width: 65%;
+        padding: 35px 75px;
+    }
+
+    main .text p {
+        margin: 25px 0px;
+    }
+}
