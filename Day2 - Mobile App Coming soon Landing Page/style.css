@@ -1,0 +1,170 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+
+    /* --primary-red: hsl(208, 31%, 21%);
+    --soft-red: hsl(214, 74%, 49%); */
+    --primary-red: hsl(0, 36%, 70%);
+    --soft-red: hsl(0, 93%, 68%);
+    --grayish-red: hsl(0, 6%, 24%);
+    --light-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    --thick-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    --weight-300: 300;
+    --weight-400: 400;
+    --weight-500: 500;
+}
+
+body {
+    font-size: 16px;
+    background-color: var(--primary-red);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    width: 100vw;
+    padding: 50px;
+    text-align: center;
+}
+
+.subscribe {
+    width: 100vw;
+    padding: 25px 50px;
+    line-height: 30px;
+    background-color: white;
+    text-align: center;
+}
+
+.subscribe h1 {
+    color: var(--soft-red);
+    margin: 25px auto;
+}
+
+.subscribe h2 {
+    color: var(--primary-red);
+    margin: 25px auto;
+}
+
+.subscribe input[type='email'] {
+    border: 1px solid var(--primary-red);
+    outline: none;
+    padding: 15px 15px;
+    margin:  20px auto;
+    font-size: 1.25rem;
+    font-weight: var(--weight-400);
+    letter-spacing: 0.3rem;
+    display: block;
+    width: 75%;
+
+}
+
+.subscribe input[type='email']:focus , .subscribe input[type='email']:hover {
+    border: 2px solid var(--soft-red);
+}
+
+.subscribe input[type='submit'] {
+    border: 1px solid var(--primary-red);
+    outline: none;
+    padding: 15px 25px;
+    margin: 20px auto ;
+    font-size: 1.25rem;
+    color: white;
+    font-weight: var(--weight-400);
+    letter-spacing: 0.3rem;
+    background: var(--thick-gradient);
+    
+    display: block;
+}
+
+.subscribe input[type='submit']:hover {
+    background: var(--light-gradient);
+    color: var(--primary-red);
+    border: 2px solid var(--soft-red);
+}
+
+.countdown , .features  , footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* align-items: flex-start; */
+}
+
+.countdown div  {
+}
+
+.countdown div img {
+    width: 100%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 25px auto;
+}
+
+.features div {
+    margin: 25px;
+    width: 33%;
+    padding: 25px;
+    text-align: center;
+    background-color: white;
+    line-height: 25px;
+}
+
+.features div h2 {
+    color: var(--soft-red);
+    margin: 25px;
+}
+
+footer {
+    background-color: #21273D;
+    text-align: left;
+    font-weight: bold;
+}
+
+footer div {
+    margin: 25px;
+    padding: 25px;
+    line-height: 25px;
+}
+
+footer div h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+footer div a, footer div h4 {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+footer div a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 750px) {
+    .subscribe {
+        padding: 25px;
+    }
+
+    .subscribe input[type='email'] {
+        width: 90%;
+    }
+
+    .countdown , .features  , footer {
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .footer div , .features div {
+        width: 90%;
+        margin: auto;
+        margin: 25px;
+    }
+}
